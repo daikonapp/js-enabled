@@ -45,19 +45,3 @@
   max-width: 480px;
   max-height: 150px;
 }
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  border-bottom: 10px solid crimson;
-  width: 100%;
-}
-
-.navbar li {
-  margin: 0 1rem;
-}
-
-.navbar a {
-  background-color: yellow;
-}
