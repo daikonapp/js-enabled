@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+# Daikon App layout
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## An App Full stack with MERN
 
-## Available Scripts
+   - home page
+   - a profile page
+   - a page named feed
+   - a create page
 
-In the project directory, you can run:
+    1. the user should be able to write a post/story/article etc
+    2. in that post user should be allowed to add links
+    3. user should be able to add images
+    4. user should be able to add videos (YouTube api, which is in an i-frame, Video upload functionality- requires Backend effort as well - multer is an package which helps us to upload files.
 
-### `yarn start`
+    - on the feeds page, call the api to fetch all those posts, and show them, maybe like Fb, twitter, instagram,
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    1. this can include posts in card UI.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+    - same ideology on the profile page.
 
-### `yarn test`
+    1. email, name, gender, profile-image
+    1.1. Backend task - create an api which accepts these three fields and saves them in database
+    1.2. Frontend task - consume that API on load of profile page, render those details.
+    1.3. Frontend task - allow user to modify these details, considering email is unique-key. Call an PUT api to BE which stores the updated data in Database.
+    1.4. Backend task - create an PUT api to update profile data in DB.
+    1.5. profile image should be taken care of in the same API. (use multer here again)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    - Miscelleanous
 
-### `yarn build`
+    1. trending page to show latest news (5-10 news)
+    1.1. request our own bacckend, BE will request i.e., use reddit api to fetch the details and show them here.
+    1.2. FE should render them in minimal.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    2. since Ash is on the team, we can integrate SEO related stuff, like meta-tags on our front-end.
